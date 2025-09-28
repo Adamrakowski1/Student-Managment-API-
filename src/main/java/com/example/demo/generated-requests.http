@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:8080
+@id = 1
+
+### Get all students
+GET {{baseUrl}}/api/v1/student
+Accept: application/json
+
+### Update Student
+PUT {{baseUrl}}/api/v1/student/1?name=Bobby&email=bob@gmail.com
+
+### Create a student
+POST {{baseUrl}}/api/v1/student/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "John",
+  "email": "john@example.com",
+  "age": 25,
+  "dob": "1998-01-01"
+}
+
+### Delete a student
+DELETE {{baseUrl}}/api/v1/student/1
